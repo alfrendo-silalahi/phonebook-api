@@ -1,10 +1,10 @@
-Please build phonebook-be-springboot with `./gradlew bootJar` or `./gradlew.bat bootJar` before use docker compose
+Please build phonebook-be-springboot with `./gradlew bootJar` or `./gradlew.bat bootJar` before use Docker Compose to run application
 
 Or run phonebook-be-springboot and phonebook-fe-react, and MySQL separately in local computer
 
 > Use IntelliJ or other IDE to run Spring Boot application or run `gradle bootRun`
 
-> Run React app with `npm run dev`
+> Run React app with `npm install` followed by `npm run dev`
 
 BASE URL API : http://localhost:8080
 
