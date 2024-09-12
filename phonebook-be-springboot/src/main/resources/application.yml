@@ -1,0 +1,8 @@
+spring:
+  application:
+    name: phonebook-be-springboot
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/phonebook
+    username: root
+    password: root

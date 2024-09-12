@@ -1,0 +1,421 @@
+{
+	"info": {
+		"_postman_id": "9ef48fab-4d14-4577-ab14-f4bc13a18632",
+		"name": "Phone Book API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26723141"
+	},
+	"item": [
+		{
+			"name": "Get contacts",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/contacts",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "pageSize",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sortBy",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "sortDir",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "search",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get contacts",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/contacts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sortBy",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sortDir",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"success\",\n    \"data\": {\n        \"contacts\": [\n            {\n                \"id\": \"18e70af0-dba6-4d28-a818-26f957153322\",\n                \"name\": \"Alfrendo Silalahi\",\n                \"phoneNumber\": \"12345\"\n            },\n            {\n                \"id\": \"0cf7bddf-aa8d-4565-adfd-dc6c836964a1\",\n                \"name\": \"Angelica.Schmidt\",\n                \"phoneNumber\": \"576-861-0951\"\n            },\n            {\n                \"id\": \"9f03d1f7-82e5-4b2f-8c64-1b7b7629d6e9\",\n                \"name\": \"Chris Garcia\",\n                \"phoneNumber\": \"089012345678\"\n            },\n            {\n                \"id\": \"7f03d1f7-82e5-4b2f-8c64-1b7b7629d6e7\",\n                \"name\": \"David Martinez\",\n                \"phoneNumber\": \"087890123456\"\n            },\n            {\n                \"id\": \"e864b8ae-0c5f-4437-942e-3b35fcbf1892\",\n                \"name\": \"Dovie.Crona\",\n                \"phoneNumber\": \"594-216-3415\"\n            },\n            {\n                \"id\": \"4f03d1f7-82e5-4b2f-8c64-1b7b7629d6e4\",\n                \"name\": \"Emily Davis\",\n                \"phoneNumber\": \"084567890123\"\n            },\n            {\n                \"id\": \"c76bfc54-934d-4acd-8a42-98ba15f15a78\",\n                \"name\": \"Hertha.Ortiz\",\n                \"phoneNumber\": \"703-881-3873\"\n            },\n            {\n                \"id\": \"dea52d28-3a6f-4bb1-b716-a3378c897447\",\n                \"name\": \"Ilene85\",\n                \"phoneNumber\": \"849-539-1204\"\n            },\n            {\n                \"id\": \"2f03d1f7-82e5-4b2f-8c64-1b7b7629d6e2\",\n                \"name\": \"Jane Smith\",\n                \"phoneNumber\": \"082345678901\"\n            },\n            {\n                \"id\": \"2b3c4d5e-6f7g-8h9i-0j1k-2l3m4n5o6p7q\",\n                \"name\": \"Jane Smith\",\n                \"phoneNumber\": \"0987654321\"\n            }\n        ],\n        \"lastPage\": false,\n        \"page\": 1\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Create contact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{$randomUserName}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"notes\": \"{{$randomLoremText}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/contacts",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Create contact",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomUserName}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"notes\": \"{{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/contacts",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts"
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get contact detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "dea52d28-3a6f-4bb1-b716-a3378c897448"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get contact detail",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "dea52d28-3a6f-4bb1-b716-a3378c897447"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"success\",\n    \"data\": {\n        \"contact\": {\n            \"id\": \"dea52d28-3a6f-4bb1-b716-a3378c897447\",\n            \"name\": \"Ilene85\",\n            \"phoneNumber\": \"849-539-1204\",\n            \"email\": \"849-539-1204\",\n            \"address\": \"53988 Morton Haven\",\n            \"notes\": \"Lorem ipsum ......\",\n            \"createdAt\": \"2024-09-13T00:59:06\",\n            \"updatedAt\": \"2024-09-13T00:59:06\"\n        }\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Update contact",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{$randomUserName}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"notes\": \"{{$randomLoremText}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Update contact",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"{{$randomUserName}}\",\n    \"phoneNumber\": \"{{$randomPhoneNumber}}\",\n    \"email\": \"{{$randomEmail}}\",\n    \"address\": \"{{$randomStreetAddress}}\",\n    \"notes\": \"{{$randomLoremText}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "dea52d28-3a6f-4bb1-b716-a3378c897448"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 201,\n    \"status\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete contact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+					"host": [
+						"{{BASE_URL}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"contacts",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "dea52d28-3a6f-4bb1-b716-a3378c897447"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete contact",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/api/v1/contacts/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contacts",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "dea52d28-3a6f-4bb1-b716-a3378c897448"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "",
+							"type": "text"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"status\": \"success\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BASE_URL",
+			"value": "http://localhost:8080",
+			"type": "string"
+		}
+	]
+}
