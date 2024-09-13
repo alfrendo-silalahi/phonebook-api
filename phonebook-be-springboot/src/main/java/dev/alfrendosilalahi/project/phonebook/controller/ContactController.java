@@ -113,7 +113,7 @@ public class ContactController {
     @PutMapping("/{id}")
     public ResponseEntity<BaseResponseDTO<Void>> updateContact(
             @PathVariable String id,
-            @RequestBody ContactRequestDTO contactRequestDTO
+            @RequestBody @Valid ContactRequestDTO contactRequestDTO
     ) {
         contactService.updateContact(id, contactRequestDTO);
         return ResponseEntity

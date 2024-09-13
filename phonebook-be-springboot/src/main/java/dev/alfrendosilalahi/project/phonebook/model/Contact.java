@@ -3,8 +3,6 @@ package dev.alfrendosilalahi.project.phonebook.model;
 import jakarta.persistence.*;
 import lombok.*;
 
-import java.util.List;
-
 @Setter
 @Getter
 @AllArgsConstructor
