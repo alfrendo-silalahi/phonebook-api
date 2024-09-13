@@ -1,6 +1,5 @@
 package dev.alfrendosilalahi.project.phonebook.exception.handler;
 
-import dev.alfrendosilalahi.project.phonebook.dto.response.BaseResponseDTO;
 import dev.alfrendosilalahi.project.phonebook.dto.response.ErrorBaseResponseDTO;
 import dev.alfrendosilalahi.project.phonebook.enums.ResStatus;
 import dev.alfrendosilalahi.project.phonebook.exception.ResourceNotFoundException;
@@ -29,9 +28,11 @@ public class GlobalExceptionHandler {
     }
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
-    public ResponseEntity<ErrorBaseResponseDTO<Map<String, String>> > handleMethodArgumentNotValidException(MethodArgumentNotValidException e) {
+    public ResponseEntity<ErrorBaseResponseDTO<Map<String, String>>> handleMethodArgumentNotValidException(
+            MethodArgumentNotValidException e) {
         Map<String, String> errorMap = new HashMap<>();
-        e.getBindingResult().getFieldErrors().forEach(error -> errorMap.put(error.getField(), error.getDefaultMessage()));  
+        e.getBindingResult().getFieldErrors()
+                .forEach(error -> errorMap.put(error.getField(), error.getDefaultMessage()));
         return ResponseEntity.badRequest().body(ErrorBaseResponseDTO.<Map<String, String>>builder()
                 .code(HttpStatus.BAD_REQUEST.value())
                 .status(ResStatus.ERROR.name())
