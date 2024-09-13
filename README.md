@@ -88,6 +88,6 @@ The frontend currently supports GET and DELETE operations on the phonebook entri
 
 ## Development Notes
 
-- The backend uses Spring Boot and provides a RESTful API.
-- The frontend is built with React and currently implements a subset of the available API operations.
+- The backend uses Spring Boot and provides a RESTful API (full CRUD features).
+- The frontend is built with React and currently implements a subset of the available API operations (GET & DELETE method only).
 - MySQL is used as the database (when running with Docker Compose or configured separately).
